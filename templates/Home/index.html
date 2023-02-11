@@ -1,0 +1,86 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block title %}
+Welcome |
+{% endblock title %}
+
+{% block content %}
+<div class="alert alert-secondary" role="alert">
+    <p style="color: rgb(255, 0, 0);font-weight: bold;">
+      Mr. Deepu Pal<br />
+      +91-9718964038 <br>
+      +91-9818768038 <br>
+      +91-8076054655 <br>
+    </p>
+    <p style="color: rgb(255, 0, 0);font-weight: bold;">
+      Mr. Arun kumar <br />
+      +91-9718529279
+    </p>
+  </div>
+  <div
+    class="p-3 mb-2 bg-primary-subtle text-emphasis-primary p-3 bg-info bg-opacity-10 border border-info border-start-0 rounded-end mr-5"
+  >
+    <p style="font-family: 'Sriracha', cursive;">
+      "A complete HVAC, UPS, Fire Alarm System, CCTV, PA System , IFM Service,
+      PAC, House Keeping Service, MST and Engineer Solution..."
+    </p>
+  </div>
+  <h4 class="" style="margin: 5px 15px; text-decoration: underline">
+    We Provide service to the following:
+  </h4>
+  <div class="row row-cols-1 row-cols-md-2 mb-3" style="margin-top: 20px">
+    {% for imgimage in listProducts %}
+    <div class="card" style="width: 18rem">
+      <img src="{%static imgimage%}" class="card-img-top" alt="..." />
+      <div class="card-body">
+      </div>
+    </div>
+    {% endfor %}
+{% comment %} <!--
+    <div class="card" style="width: 18rem">
+      <img src="{%static 'assets/product/vrv.png'%}" class="card-img-top" alt="..." />
+      <div class="card-body">
+        <p class="card-text">VRV</p>
+      </div>
+    </div>
+    <div class="card" style="width: 18rem">
+      <img src="{%static 'assets/product/vrf.png'%}" class="card-img-top" alt="..." />
+      <div class="card-body">
+        <p class="card-text">VRF</p>
+      </div>
+    </div>
+    <div class="card" style="width: 18rem">
+      <img src="{%static 'assets/product/splitsystem.png'%}" class="card-img-top" alt="..." />
+      <div class="card-body">
+        <p class="card-text">Split System</p>
+      </div>
+    </div>
+    <div class="card" style="width: 18rem">
+      <img src="{%static 'assets/product/cassetteunit.png'%}" class="card-img-top" alt="..." />
+      <div class="card-body">
+        <p class="card-text">Cassette Units</p>
+      </div>
+    </div>
+    <div class="card" style="width: 18rem">
+      <img src="{%static 'assets/product/ductableunit.png'%}" class="card-img-top" alt="..." />
+      <div class="card-body">
+        <p class="card-text">Ductable Units</p>
+      </div>
+    </div>
+    <div class="card" style="width: 18rem">
+      <img src="{%static 'assets/product/ahu.png'%}" class="card-img-top" alt="..." />
+      <div class="card-body">
+        <p class="card-text">AHU</p>
+      </div>
+    </div> -->{% endcomment %} 
+</div>
+<hr>
+<div class="jumbotron">
+    <h1 class="mb-5">Our previous Clients</h1>
+    {% for imglogo in listcompany %}
+      <img src="{%static imglogo%}" class="card-img-top" alt="..." />
+    {% endfor %}
+  </div>
+{% endblock content %}
